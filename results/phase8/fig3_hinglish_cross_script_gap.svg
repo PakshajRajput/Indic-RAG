@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" width="100%" height="100%" style="background:#ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+<text x="350.0" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Cross-Script Retrieval Gap: Devanagari vs. Roman Hinglish (Dev N=150)</text>
+<line x1="70" y1="300" x2="660" y2="300" stroke="#94a3b8" stroke-width="1.5" />
+<line x1="70" y1="50" x2="70" y2="300" stroke="#94a3b8" stroke-width="1.5" />
+<line x1="70" y1="300.0" x2="660" y2="300.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="304.0" text-anchor="end" font-size="11" fill="#64748b">0%</text>
+<line x1="70" y1="250.0" x2="660" y2="250.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="254.0" text-anchor="end" font-size="11" fill="#64748b">20%</text>
+<line x1="70" y1="200.0" x2="660" y2="200.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="204.0" text-anchor="end" font-size="11" fill="#64748b">40%</text>
+<line x1="70" y1="150.0" x2="660" y2="150.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="154.0" text-anchor="end" font-size="11" fill="#64748b">60%</text>
+<line x1="70" y1="100.0" x2="660" y2="100.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="104.0" text-anchor="end" font-size="11" fill="#64748b">80%</text>
+<line x1="70" y1="50.0" x2="660" y2="50.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4" />
+<text x="60" y="54.0" text-anchor="end" font-size="11" fill="#64748b">100%</text>
+<rect x="116.25" y="83.32499999999999" width="55" height="216.675" fill="#10b981" rx="3" />
+<text x="143.75" y="77.32499999999999" text-anchor="middle" font-size="11" font-weight="bold" fill="#10b981">86.7%</text>
+<text x="143.75" y="318" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Devanagari Baseline</text>
+<rect x="263.75" y="293.325" width="55" height="6.675" fill="#3b82f6" rx="3" />
+<text x="291.25" y="287.325" text-anchor="middle" font-size="11" font-weight="bold" fill="#3b82f6">2.7%</text>
+<text x="291.25" y="318" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Method A</text>
+<text x="291.25" y="332" text-anchor="middle" font-size="9" fill="#64748b">Unnormalized</text>
+<rect x="411.25" y="300.0" width="55" height="0.0" fill="#f59e0b" rx="3" />
+<text x="438.75" y="294.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">0.0%</text>
+<text x="438.75" y="318" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Method B</text>
+<text x="438.75" y="332" text-anchor="middle" font-size="9" fill="#64748b">Rule-based</text>
+<rect x="558.75" y="300.0" width="55" height="0.0" fill="#8b5cf6" rx="3" />
+<text x="586.25" y="294.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">0.0%</text>
+<text x="586.25" y="318" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">Method C</text>
+<text x="586.25" y="332" text-anchor="middle" font-size="9" fill="#64748b">Full Multi-Agent</text>
+</svg>

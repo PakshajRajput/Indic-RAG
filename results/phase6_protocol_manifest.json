@@ -1,0 +1,43 @@
+{
+  "protocol_version": "1.0.0-phase6-freeze",
+  "random_seed": 42,
+  "models": {
+    "serving_answerer": "meta-llama/Llama-3.1-8B-Instruct",
+    "offline_judge": "google/gemini-2.0-flash",
+    "dense_embeddings": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "retrieval": {
+    "strategy": "R4: Hybrid RRF",
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "rrf_c": 60,
+    "candidate_depth_k": 20,
+    "top_k": 5
+  },
+  "agent_thresholds": {
+    "score_gate_s1": 0.005,
+    "evidence_grader": 0.2,
+    "verifier_support": 0.75,
+    "max_llm_calls": 8,
+    "max_retrieval_rounds": 2,
+    "max_retries": 1
+  },
+  "statistical_testing": {
+    "bootstrap_resamples": 1000,
+    "confidence_level": 0.95,
+    "significance_alpha": 0.05
+  },
+  "file_hashes_sha256": {
+    "data/processed/benchmark_dev_150.json": "2e7384498a71936770098a6147577aadefe3391c3ed244942fbf0f202d4922fb",
+    "data/processed/benchmark_test_75.json": "532f52986487d9e1f00b9c5872d663eae1ba7d40d1b13fc1cbdf15b538308f6c",
+    "data/processed/corpus_dev.json": "d294086976c71200e004b2976048459b7e22b21f5c89c2e5d937eaebf1596d38",
+    "data/processed/corpus_test.json": "d2749807efec7b76a10bcc0d36958e2ac71847b4b8976504dfb2be37b289687f",
+    "data/processed/counterfactual/corpus_dev_perturbed.json": "ab0ee0f18c879897f20de77142e20662b928484777aedf98d35610d7c567491e",
+    "data/processed/counterfactual/corpus_test_perturbed.json": "f069777c41c55059febb24737fabc06245a75e60ef034ac6717ad0689d01dd65",
+    "src/indicrag/agents/state.py": "e36370385f377371fad5c33c555b91e0a971273dad0d4fd3d885655b3d855422",
+    "src/indicrag/agents/graph.py": "f72fe93ec3c9c5c7f881eea1c2f0549f27ee53dafbf0cc46c02abcf667f84cc7",
+    "src/indicrag/eval/metrics.py": "f79a7db27f3eabf4ca873717373d3f2d26bf1fa92e366671bee3ab0d381e2218",
+    "src/indicrag/eval/judge.py": "19919ed300ed353eb63f1ef9bc4c8d13992cd6b518dd6c636e9f599877545bc4",
+    "src/indicrag/eval/significance.py": "c1ecb3f879b54c12bf68d1424e134a1aa7126ffcb3792913c494750d9aa05544"
+  }
+}

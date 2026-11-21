@@ -1,0 +1,4 @@
+comparison,mcnemar_b,mcnemar_c,discordant_pairs,p_value_raw,nominal_sig_05,bonferroni_threshold,bonferroni_sig,mean_gain,ci95_diff_low,ci95_diff_high,interpretation
+hinglish_method_B_vs_method_A,0,2,2,0.5,False,0.016666666666666666,False,-0.013333333333333334,-0.03333333333333333,0.0,Observed sample difference not statistically distinguishable from random variation (p >= 0.05)
+S2_verifier_vs_S1_score_gate,0,3,3,0.25,False,0.016666666666666666,False,,,,Observed sample difference not statistically distinguishable from random variation (p >= 0.05)
+S5_full_vs_S0_single_pass,0,3,3,0.25,False,0.016666666666666666,False,,,,Observed sample difference not statistically distinguishable from random variation (p >= 0.05)

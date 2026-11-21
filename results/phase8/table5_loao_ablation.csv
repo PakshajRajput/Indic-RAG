@@ -1,0 +1,6 @@
+variant,corpus,acc_ans,acc_unans,acc_overall,acc_overall_ci95,false_refusal_rate,hallucination_rate,token_f1,citation_precision
+Full System S5,Perturbed Dev,0.84,1.0,0.92,"[87.33%, 96.00%]",0.09333333333333334,0.0,0.6776624242605824,0.0
+w/o Query Agent,Perturbed Dev,0.84,1.0,0.92,"[87.33%, 96.00%]",0.16,0.0,0.6776624242605824,0.0
+w/o Evidence Grader,Perturbed Dev,0.84,1.0,0.92,"[87.33%, 96.00%]",0.09333333333333334,0.0,0.6776624242605824,0.0
+w/o Verifier,Perturbed Dev,0.84,1.0,0.92,"[87.33%, 96.00%]",0.09333333333333334,0.0,0.6776624242605824,0.0
+w/o Arbiter Retry,Perturbed Dev,0.84,1.0,0.92,"[87.33%, 96.00%]",0.16,0.0,0.6776624242605824,0.0

@@ -1,0 +1,60 @@
+version: "v1.0"
+description: "Multi-strategy retrieval configuration for PJ-09 IndicRAG-QA (Phase 3)"
+
+# General configuration
+seed: 42
+paths:
+  corpus_dev: "data/processed/corpus_dev.json"
+  corpus_test: "data/processed/corpus_test.json"
+  corpus_dev_perturbed: "data/processed/counterfactual/corpus_dev_perturbed.json"
+  corpus_test_perturbed: "data/processed/counterfactual/corpus_test_perturbed.json"
+  benchmark_dev: "data/processed/benchmark_dev_150.json"
+  benchmark_test: "data/processed/benchmark_test_75.json"
+  embeddings_cache_dir: "data/processed/embeddings"
+  results_dir: "results"
+
+# Strategy R1: Lexical retrieval (BM25)
+r1_bm25:
+  enabled: true
+  k1: 1.5
+  b: 0.75
+  include_title: true
+  top_k: 20
+
+# Strategy R2: Multilingual dense retrieval
+r2_dense:
+  enabled: true
+  # Primary verified lightweight models:
+  # - sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (118M params, 470MB)
+  # - intfloat/multilingual-e5-small (118M params, 471MB)
+  # - intfloat/multilingual-e5-base (278M params, 1.1GB)
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  batch_size: 16
+  device: "cpu"
+  include_title: true
+  top_k: 20
+
+# Strategy R3: Cross-encoder reranking
+r3_reranker:
+  enabled: true
+  model_name: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+  batch_size: 16
+  device: "cpu"
+  candidate_k: 20
+  rerank_top_k: 10
+
+# Strategy R4: Hybrid Reciprocal Rank Fusion (RRF)
+r4_rrf:
+  enabled: true
+  c: 60
+  candidate_k: 20
+  top_k: 10
+  # Weights for [BM25, Dense]
+  weights: [1.0, 1.0]
+
+# Evaluation configuration
+evaluation:
+  k_values: [1, 5, 10, 20]
+  eval_clean: true
+  eval_perturbed: true
+  scripts: ["hindi", "hinglish"]

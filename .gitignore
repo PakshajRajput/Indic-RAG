@@ -1,0 +1,82 @@
+# .gitignore for PJ-09 IndicRAG-QA
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+
+# Virtual environments
+venv/
+venv_xlit/
+.venv/
+env/
+ENV/
+
+# Data (raw — large, not tracked)
+data/raw/
+data/processed/
+
+# Model weights (never commit)
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+
+# HuggingFace cache
+.cache/
+
+# Results (tracked as small jsonl/csv)
+# results/ is tracked, but exclude large files:
+results/traces_export/*.jsonl
+
+# Scratch files (verification artifacts — not needed in repo)
+scratch_*.py
+scratch/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ruff
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz

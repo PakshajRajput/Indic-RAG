@@ -1,0 +1,5 @@
+Condition,Total_Queries,Acc_Ans,Acc_Unans,Acc_Overall,Rejection_Rate,False_Refusal_Rate,Hallucination_Rate,Exact_Match,Token_F1,Mean_Latency_ms
+S0_Vanilla_NoRetrieval,150,0.00%,100.00%,50.00%,100.00%,100.00%,0.00%,0.00%,0.00%,0.00 ms
+RAG_CleanCorpus_Hindi,150,90.67%,100.00%,95.33%,54.67%,9.33%,0.00%,0.00%,73.77%,0.00 ms
+RAG_PerturbedCorpus_Hindi,150,90.67%,100.00%,95.33%,54.67%,9.33%,0.00%,0.00%,73.77%,0.00 ms
+RAG_CleanCorpus_Hinglish_Unnorm,150,2.67%,100.00%,51.33%,98.67%,97.33%,0.00%,0.00%,1.96%,0.01 ms

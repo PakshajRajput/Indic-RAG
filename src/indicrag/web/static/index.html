@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndicRAG-QA | Research Operations Platform</title>
+  <meta name="description" content="Production-grade, multi-agent RAG research platform for Hindi (Devanagari) and Hinglish (Roman script) question answering following RGB benchmark protocols.">
+  
+  <!-- Typography inspired by PolarOps -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">IR</div>
+        <div class="brand-title">
+          <span class="brand-name">IndicRAG-QA</span>
+          <span class="brand-badge">Research Ops</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-label">Platforms & Telemetry</div>
+        <a class="nav-item active" data-view="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Overview</span>
+        </a>
+        <a class="nav-item" data-view="workspace">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+          <span>Hinglish QA Workspace</span>
+        </a>
+        <a class="nav-item" data-view="agents">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <span>Agent Operations</span>
+        </a>
+
+        <div class="nav-label" style="margin-top: 14px;">Knowledge & Evaluation</div>
+        <a class="nav-item" data-view="evidence">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Evidence Explorer</span>
+        </a>
+        <a class="nav-item" data-view="eval">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Evaluation Lab</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="telemetry-pill">
+          <div><span class="status-dot"></span><span>PIPELINE ONLINE</span></div>
+          <span>CPU-Only</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="breadcrumb" id="active-breadcrumb">
+            IndicRAG-QA <span>/ Research Operations Overview</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <select id="topbar-sample-select" class="input-select" style="width: 200px;">
+            <option value="">Load Sample Query...</option>
+          </select>
+          <span class="chip chip-cyan">Seed: 42</span>
+          <span class="chip chip-emerald">Llama-3.1-8B</span>
+          <span class="chip">RGB AAAI'24</span>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Area -->
+      <main class="content-area">
+        <!-- 1. OVERVIEW VIEW -->
+        <section id="view-overview" class="page-view active">
+          <h1 class="section-title">Research Operations Dashboard</h1>
+          <p class="section-desc">Consolidated multi-agent benchmark telemetry across 150 Dev and 75 held-out Test queries under clean and counterfactual noise conditions.</p>
+
+          <div class="grid-4">
+            <div class="card metric-card">
+              <span class="metric-label">Clean Answerable Acc</span>
+              <div class="metric-value" id="metric-clean-acc">92.0%</div>
+              <div class="metric-sub"><span class="chip chip-cyan" style="font-size:10px;">System S2/S5</span><span>Filtered assertions</span></div>
+            </div>
+
+            <div class="card metric-card">
+              <span class="metric-label">Roman Hinglish Baseline</span>
+              <div class="metric-value" id="metric-frr">2.67%</div>
+              <div class="metric-sub"><span class="chip chip-rose" style="font-size:10px;">Method A</span><span>97.3% False Refusal Rate</span></div>
+            </div>
+
+            <div class="card metric-card">
+              <span class="metric-label">Unanswerable Rejection</span>
+              <div class="metric-value" id="metric-unans-acc">100.0%</div>
+              <div class="metric-sub"><span class="chip chip-emerald" style="font-size:10px;">Zero Hallucinations</span><span>0.0% Hallucination Rate</span></div>
+            </div>
+
+            <div class="card metric-card">
+              <span class="metric-label">Noise Degradation Drop</span>
+              <div class="metric-value" id="metric-noise-drop">-8.0 pp</div>
+              <div class="metric-sub"><span class="chip chip-amber" style="font-size:10px;">20% Distractors</span><span>Perturbed corpus</span></div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <h2 class="section-title" style="font-size: 16px;">Systems Ladder S0–S5 Performance (Dev Split)</h2>
+              <p class="section-desc" style="margin-bottom: 12px;">Blue bars represent Clean Corpus accuracy; Red bars represent Perturbed Corpus (415 counterfactual distractors).</p>
+              <div class="chart-container" id="overview-ladder-chart"></div>
+            </div>
+
+            <div class="card">
+              <h2 class="section-title" style="font-size: 16px;">Cross-Script Hinglish Normalization Deficit</h2>
+              <p class="section-desc" style="margin-bottom: 12px;">Comparison between Unnormalized Roman (Method A) vs. Rule-based transliteration (Method B & C).</p>
+              <div class="chart-container" id="overview-hinglish-chart"></div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 10px;">
+            <h2 class="section-title" style="font-size: 16px;">Operational Budget & Guardrail Limits</h2>
+            <div style="display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap;">
+              <div class="chip">Max LLM Calls: 8 per query</div>
+              <div class="chip">Max Retrieval Rounds: 2</div>
+              <div class="chip">Max Retries: 1 bounded loop</div>
+              <div class="chip chip-cyan">Offline Judge: google/gemini-2.0-flash (Decoupled)</div>
+              <div class="chip chip-emerald">Metric Identities: Acc_ans + FRR + Err_ans = 1.0 (Strictly Validated)</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. HINGLISH QA WORKSPACE VIEW -->
+        <section id="view-workspace" class="page-view">
+          <h1 class="section-title">Hinglish QA Workspace</h1>
+          <p class="section-desc">Interactive multi-agent retrieval sandbox supporting Roman Hinglish, Devanagari Hindi, and English with script-aware generation and inline evidence grounding.</p>
+
+          <div class="workspace-grid">
+            <!-- Left: Query Controls -->
+            <div class="card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <label class="input-label" for="query-input">User Query Input</label>
+                <span id="detected-script-chip" class="chip chip-cyan">Ready</span>
+              </div>
+
+              <div class="sample-queries-bar" id="sample-buttons-container"></div>
+
+              <div class="input-group">
+                <textarea id="query-input" class="query-textarea" placeholder="Type a question in Roman Hinglish (e.g. 'Laxmi Mittal ka business kisme hai?'), Devanagari Hindi, or English..."></textarea>
+              </div>
+
+              <div class="controls-row">
+                <div>
+                  <label class="input-label" for="system-select">Systems Ladder Configuration</label>
+                  <select id="system-select" class="input-select">
+                    <option value="S5" selected>S5 — Full Multi-Agent (Retry + Verifier)</option>
+                    <option value="S4">S4 — Query-Adapted RAG (Script + Translit)</option>
+                    <option value="S3">S3 — Graded Verifier RAG</option>
+                    <option value="S2">S2 — Claim Verifier RAG</option>
+                    <option value="S1">S1 — Non-Agentic Score Gate</option>
+                    <option value="S0">S0 — Single-Pass RAG Baseline</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="input-label" for="corpus-select">Search Corpus Condition</label>
+                  <select id="corpus-select" class="input-select">
+                    <option value="clean" selected>Clean Dev Corpus (2,078 passages)</option>
+                    <option value="perturbed">Perturbed Dev Corpus (2,493 passages / 415 distractors)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px;">
+                <button id="run-query-btn" class="btn-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Run Query (Ctrl + Enter)
+                </button>
+                <button id="clear-query-btn" class="sample-btn" style="padding: 0 16px;">Clear</button>
+              </div>
+            </div>
+
+            <!-- Right: Results & Telemetry -->
+            <div class="card">
+              <div class="result-header">
+                <span class="input-label" style="margin: 0;">Multi-Agent Grounded Response</span>
+                <div id="result-badges" style="display: flex; gap: 6px;">
+                  <span class="chip">STANDBY</span>
+                </div>
+              </div>
+
+              <div id="abstention-banner" class="abstention-banner" style="display: none;"></div>
+
+              <div id="result-answer" class="result-answer-box">
+                <span style="color:var(--text-muted); font-style:italic;">Submit a query or load a pre-configured sample to observe live multi-agent execution, citations, and abstention decisions.</span>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 12px;">
+                <span class="input-label" style="margin: 0;">Retrieved Evidence Passages</span>
+                <div id="result-stats" style="display:flex; gap:6px;"></div>
+              </div>
+
+              <div class="passages-container" id="retrieved-passages-list">
+                <div style="color:var(--text-muted); padding:10px;">Retrieved passages will appear here with relevance scores and distractor labels.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. AGENT OPERATIONS VIEW -->
+        <section id="view-agents" class="page-view">
+          <h1 class="section-title">Agent Operations & StateGraph Telemetry</h1>
+          <p class="section-desc">Interactive execution topology of the LangGraph multi-agent architecture with per-node decisions, retrieval rounds, and retry boundaries.</p>
+
+          <div class="card" style="margin-bottom: 20px; border-color: rgba(56, 189, 248, 0.3);">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="chip chip-cyan" style="font-weight: 700;">ARCHITECTURAL NOTICE</span>
+                <span style="font-size: 13px; color: var(--text-secondary);">Offline Judge Agent (<code>google/gemini-2.0-flash</code>) is strictly evaluation-only and isolated from runtime serving (AGENTS.md Rule 14).</span>
+              </div>
+              <span class="chip chip-emerald">Runtime Model: Llama-3.1-8B</span>
+            </div>
+          </div>
+
+          <!-- Visual Node Flow -->
+          <div class="graph-flow-container">
+            <div class="node-box" id="node-supervisor">
+              <div class="node-title">Supervisor</div>
+              <div class="node-status">Budget & Loop Gate</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-script">
+              <div class="node-title">Script Detector</div>
+              <div class="node-status">Unicode Block Check</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-query">
+              <div class="node-title">Query Agent</div>
+              <div class="node-status">Translit / Reformulate</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-retriever">
+              <div class="node-title">Retriever Agent</div>
+              <div class="node-status">BM25 / Dense RRF</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-grader">
+              <div class="node-title">Evidence Grader</div>
+              <div class="node-status">Distractor Filter</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-answerer">
+              <div class="node-title">Answerer Agent</div>
+              <div class="node-status">Grounded Synthesis</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-verifier">
+              <div class="node-title">Verifier Agent</div>
+              <div class="node-status">Claim & Citation Audit</div>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+
+            <div class="node-box" id="node-arbiter">
+              <div class="node-title">Abstention Arbiter</div>
+              <div class="node-status">Retry / Reason Code</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="section-title" style="font-size: 16px;">Active Execution Trace Timeline</h2>
+            <p class="section-desc" style="margin-bottom: 16px;">Real-time event log recorded across LangGraph state transitions for the most recent query.</p>
+            <div class="trace-timeline" id="trace-timeline-container">
+              <div style="color: var(--text-muted); padding: 10px;">Run a query in the Hinglish QA Workspace to generate and view structured agent execution traces.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. EVIDENCE EXPLORER VIEW -->
+        <section id="view-evidence" class="page-view">
+          <h1 class="section-title">Evidence & Corpus Explorer</h1>
+          <p class="section-desc">Searchable knowledge base of 2,078 clean passages and 415 counterfactual distractors from IndicSQuAD cluster partitions.</p>
+
+          <div class="card" style="margin-bottom: 20px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr auto; gap: 14px; align-items: center;">
+              <div>
+                <input type="text" id="evidence-search-input" class="query-textarea" style="min-height: 40px; padding: 10px 14px;" placeholder="Search by passage ID, entity title, or keyword text...">
+              </div>
+              <div>
+                <select id="evidence-corpus-select" class="input-select">
+                  <option value="clean" selected>Clean Dev Corpus (2,078 passages)</option>
+                  <option value="perturbed">Perturbed Dev Corpus (2,493 passages / with distractors)</option>
+                </select>
+              </div>
+              <div id="evidence-total-count" class="chip chip-cyan" style="font-size: 12px; height: 40px;">
+                2,078 Passages Indexed
+              </div>
+            </div>
+          </div>
+
+          <div class="card data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Passage ID</th>
+                  <th>Article Title</th>
+                  <th>Partition / Type</th>
+                  <th>Length</th>
+                  <th>Text Excerpt</th>
+                </tr>
+              </thead>
+              <tbody id="evidence-table-body">
+                <tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding:20px;">Loading passage records...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. EVALUATION LAB VIEW -->
+        <section id="view-eval" class="page-view">
+          <h1 class="section-title">Evaluation Lab & RGB Benchmark Results</h1>
+          <p class="section-desc">Verified experimental results and statistical hypothesis tests adhering strictly to AGENTS.md rules. All numbers cite reproducible records in <code>results/phase8/</code>.</p>
+
+          <div class="card" style="margin-bottom: 20px;">
+            <h2 class="section-title" style="font-size: 16px;">S0–S5 Systems Ladder Performance Matrix</h2>
+            <p class="section-desc" style="margin-bottom: 12px;">RGB metric identities strictly verified: <code>Acc_ans + FRR + Err_ans ≡ 1.0</code> and <code>Acc_unans + HR ≡ 1.0</code>.</p>
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>System ID</th>
+                    <th>Corpus</th>
+                    <th>Ans Acc</th>
+                    <th>False Refusal Rate</th>
+                    <th>Err Ans Rate</th>
+                    <th>Unans Acc</th>
+                    <th>Hallucination Rate</th>
+                    <th>Overall Acc</th>
+                  </tr>
+                </thead>
+                <tbody id="ladder-table-body">
+                  <tr><td colspan="8" style="text-align:center; color:var(--text-muted); padding:20px;">Loading benchmark data...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- Retry Transition Matrix -->
+            <div class="card">
+              <h2 class="section-title" style="font-size: 16px;">Perturbed Dev Retry Accounting (N=75)</h2>
+              <p class="section-desc" style="margin-bottom: 12px;">Transition of 75 answerable queries under S5 retries. Avoided false refusals transitioned to incorrect answers (Acc_ans invariant at 84%).</p>
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>S2 State</th>
+                      <th>S5 Outcome</th>
+                      <th>Classification</th>
+                      <th>Count</th>
+                      <th>Share</th>
+                    </tr>
+                  </thead>
+                  <tbody id="retry-table-body">
+                    <tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding:20px;">Loading retry matrix...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Statistical Significance -->
+            <div class="card">
+              <h2 class="section-title" style="font-size: 16px;">Paired Statistical Significance (McNemar Tests)</h2>
+              <p class="section-desc" style="margin-bottom: 12px;">Adjusted via Bonferroni correction (&alpha;<sub>adj</sub> = 0.0167). Differences represent sample trends rather than statistically proven superiority.</p>
+              <div class="data-table-wrapper">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Comparison</th>
+                      <th>Contingency</th>
+                      <th>Pairs</th>
+                      <th>Exact p</th>
+                      <th>Bonferroni</th>
+                      <th>Interpretation</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sig-table-body">
+                    <tr><td colspan="6" style="text-align:center; color:var(--text-muted); padding:20px;">Loading significance tests...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

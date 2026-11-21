@@ -1,0 +1,4 @@
+method,description,acc_ans,acc_unans,acc_overall,acc_overall_ci95,false_refusal_rate,hallucination_rate,token_f1
+Method A: Unnormalized Roman,Original synthetic Roman Hinglish directly to BM25/Dense,0.02666666666666667,1.0,0.5133333333333333,"[43.33%, 59.33%]",0.9733333333333334,0.0,0.01955555555555556
+Method B: Rule-based Transliteration,Deterministic reverse-phonetic dictionary mapping,0.0,1.0,0.5,"[42.00%, 58.00%]",1.0,0.0,0.0
+Method C: Full Multi-Agent S5,Script detector + Query Agent + Grader + Verifier + Arbiter retry,0.0,1.0,0.5,"[42.00%, 58.00%]",1.0,0.0,0.0

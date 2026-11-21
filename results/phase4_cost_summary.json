@@ -1,0 +1,13 @@
+{
+  "total_calls": 600.0,
+  "cache_hits": 450.0,
+  "live_calls": 150.0,
+  "cache_hit_rate": 0.75,
+  "total_prompt_tokens": 759738.0,
+  "total_completion_tokens": 12317.0,
+  "total_tokens": 772055.0,
+  "total_cost_usd": 0.011895819999999996,
+  "mean_latency_ms": 0.007372656837105751,
+  "median_latency_ms": 0.0077500008046627045,
+  "p95_latency_ms": 0.015454948879778383
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "method": "Method A: Unnormalized Roman",
+    "description": "Original synthetic Roman Hinglish directly to BM25/Dense",
+    "acc_ans": 0.02666666666666667,
+    "acc_unans": 1.0,
+    "acc_overall": 0.5133333333333333,
+    "acc_overall_ci95": "[43.33%, 59.33%]",
+    "false_refusal_rate": 0.9733333333333334,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.01955555555555556
+  },
+  {
+    "method": "Method B: Rule-based Transliteration",
+    "description": "Deterministic reverse-phonetic dictionary mapping",
+    "acc_ans": 0.0,
+    "acc_unans": 1.0,
+    "acc_overall": 0.5,
+    "acc_overall_ci95": "[42.00%, 58.00%]",
+    "false_refusal_rate": 1.0,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.0
+  },
+  {
+    "method": "Method C: Full Multi-Agent S5",
+    "description": "Script detector + Query Agent + Grader + Verifier + Arbiter retry",
+    "acc_ans": 0.0,
+    "acc_unans": 1.0,
+    "acc_overall": 0.5,
+    "acc_overall_ci95": "[42.00%, 58.00%]",
+    "false_refusal_rate": 1.0,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.0
+  }
+]

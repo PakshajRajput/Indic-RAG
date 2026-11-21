@@ -1,0 +1,5 @@
+initial_s2_state,s5_outcome,count,transition_type,pct
+Correct Answer (c_ans=63),Correct Answer (c_ans=63),63,Retained Correct,84.0
+False Refusal (r_ans=12),False Refusal (r_ans=7),7,Retained Refusal (Zero Evidence),9.33
+False Refusal (r_ans=12),Incorrect Answer (w_ans=5),5,Retried → Incorrect Answer,6.67
+Incorrect Answer (w_ans=0),Incorrect Answer (w_ans=0),0,N/A,0.0

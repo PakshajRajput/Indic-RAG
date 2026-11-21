@@ -1,0 +1,13 @@
+# requirements/xlit.txt — ISOLATED VENV ONLY (D:\Indic-QA-RAG\venv_xlit\)
+# DO NOT install into the main project venv or system Python.
+# Install procedure (Phase 0 verified):
+#   pip install ai4bharat-transliteration --no-deps
+#   pip install tqdm requests
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Note: fairseq 0.12.2 fails to build on Windows (C extension build error).
+#       ai4bharat-transliteration still imports and runs without it.
+
+ai4bharat-transliteration  # install with --no-deps
+tqdm
+requests
+torch  # CPU build

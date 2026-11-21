@@ -1,0 +1,22 @@
+{
+  "query_id": "57373d0cc3c5551400e51e87",
+  "is_impossible": false,
+  "gold_answers": [
+    "चार"
+  ],
+  "retrieved_count": 5,
+  "top_psg_ids": [
+    "psg_9a332a5cbaef",
+    "psg_ea4e838a667e",
+    "psg_582832df7e2c"
+  ],
+  "final_answer": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+  "is_abstention": true,
+  "reason_code": "ReasonCode.ANSWERER_REFUSED",
+  "agent_history": [
+    "script_detector",
+    "retriever_agent:round_1",
+    "answerer_agent:generated"
+  ],
+  "retrieved_psgs_in_state": 5
+}

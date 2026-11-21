@@ -1,0 +1,43 @@
+{
+  "hinglish_method_B_vs_method_A": {
+    "mcnemar": {
+      "b": 0,
+      "c": 2,
+      "total_discordant": 2,
+      "statistic": 2.0,
+      "p_value": 0.5,
+      "is_significant_05": false,
+      "odds_ratio": 0.0
+    },
+    "bootstrap_difference": {
+      "mean_gain": -0.013333333333333334,
+      "ci_95_diff": [
+        -0.03333333333333333,
+        0.0
+      ],
+      "p_value": 0.266
+    }
+  },
+  "S2_verifier_vs_S1_score_gate": {
+    "mcnemar": {
+      "b": 0,
+      "c": 3,
+      "total_discordant": 3,
+      "statistic": 3.0,
+      "p_value": 0.25,
+      "is_significant_05": false,
+      "odds_ratio": 0.0
+    }
+  },
+  "S5_full_vs_S0_single_pass": {
+    "mcnemar": {
+      "b": 0,
+      "c": 3,
+      "total_discordant": 3,
+      "statistic": 3.0,
+      "p_value": 0.25,
+      "is_significant_05": false,
+      "odds_ratio": 0.0
+    }
+  }
+}

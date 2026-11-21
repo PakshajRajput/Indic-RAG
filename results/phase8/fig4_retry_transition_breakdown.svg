@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" width="100%" height="100%" style="background:#ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+<text x="350.0" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Paired Transition Analysis: S2 (Verifier) vs. S5 (Multi-Agent Retry)</text>
+<text x="350.0" y="50" text-anchor="middle" font-size="12" fill="#64748b">75 Answerable Queries on Perturbed Dev (415 Counterfactual Distractors)</text>
+<rect x="80" y="80" width="200" height="70" fill="#10b981" rx="4" />
+<text x="180" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">S2: Correct Answers (63)</text>
+<text x="180" y="132" text-anchor="middle" font-size="11" fill="#ecfdf5">Acc_ans = 84.00% (63/75)</text>
+<rect x="80" y="180" width="200" height="70" fill="#f59e0b" rx="4" />
+<text x="180" y="212" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">S2: False Refusals (12)</text>
+<text x="180" y="232" text-anchor="middle" font-size="11" fill="#fffbeb">FRR = 16.00% (12/75)</text>
+<rect x="80" y="270" width="200" height="40" fill="#ef4444" rx="4" opacity="0.4" />
+<text x="180" y="295" text-anchor="middle" font-size="12" fill="#ffffff">S2: Incorrect Answers (0)</text>
+<rect x="420" y="80" width="200" height="70" fill="#10b981" rx="4" />
+<text x="520" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">S5: Correct Answers (63)</text>
+<text x="520" y="132" text-anchor="middle" font-size="11" fill="#ecfdf5">Acc_ans = 84.00% (63/75)</text>
+<rect x="420" y="170" width="200" height="50" fill="#f59e0b" rx="4" />
+<text x="520" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">S5: False Refusals (7)</text>
+<text x="520" y="210" text-anchor="middle" font-size="10" fill="#fffbeb">FRR = 9.33% (-6.67 pp)</text>
+<rect x="420" y="240" width="200" height="50" fill="#ef4444" rx="4" />
+<text x="520" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">S5: Incorrect Answers (5)</text>
+<text x="520" y="280" text-anchor="middle" font-size="10" fill="#fef2f2">Err_ans = 6.67% (+6.67 pp)</text>
+<path d="M 280 115 L 420 115" stroke="#10b981" stroke-width="4" marker-end="url(#arrow-green)" />
+<text x="350" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#047857">63 retained</text>
+<path d="M 280 205 L 420 195" stroke="#f59e0b" stroke-width="2.5" />
+<text x="350" y="192" text-anchor="middle" font-size="10" fill="#b45309">7 continued</text>
+<path d="M 280 225 C 330 225, 370 265, 420 265" stroke="#ef4444" stroke-width="3" stroke-dasharray="4" />
+<text x="350" y="258" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">5 retried → incorrect</text>
+</svg>

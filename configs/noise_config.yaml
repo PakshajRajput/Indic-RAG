@@ -1,0 +1,27 @@
+version: "v1.0"
+description: "Noise injection and counterfactual distractor configuration for PJ-09 IndicRAG-QA"
+
+# Seed for deterministic generation
+seed: 42
+
+# RGB protocol candidate set settings
+rgb_protocol:
+  passage_count_k: 5
+  noise_rates: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+
+# Noise types and distribution
+noise_types:
+  irrelevant:
+    description: "Unrelated background passages drawn from disjoint Train articles"
+    source_partition: "train"
+  topical_hard_negative:
+    description: "Passages from the same article/topic that do not contain the answer"
+  counterfactual_perturbed:
+    description: "Gold passage with systematically perturbed dates, numbers, or entities"
+    perturbation_rate: 0.3
+
+# Output paths
+paths:
+  baseline_manifest: "data/processed/baseline_manifest.json"
+  noisy_eval_dir: "data/processed/noise_eval"
+  counterfactual_corpus_dir: "data/processed/counterfactual"

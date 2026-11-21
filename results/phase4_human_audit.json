@@ -1,0 +1,440 @@
+{
+  "report": {
+    "sample_size": 30,
+    "n_answerable": 15,
+    "n_unanswerable": 15,
+    "observed_agreement": 1.0,
+    "cohens_kappa": 1.0,
+    "kappa_interpretation": "Almost perfect agreement",
+    "n_agreements": 30,
+    "n_disagreements": 0,
+    "disagreements": [],
+    "limitations": [
+      "Audit sample is restricted to N=30 Dev benchmark queries to maintain rapid verification cycle.",
+      "Agreement reflects exact categorical classification across 5 discrete RGB verdict categories.",
+      "Does not replace full-dataset manual annotation, but validates Judge calibration before scaling."
+    ]
+  },
+  "items": [
+    {
+      "query_id": "5a58f69e3e1742001a15cee2",
+      "question": "गठन का दूसरा नाम क्या है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5730a40f396df91900096238",
+      "question": "ब्रिटेन से पहले किस देश की भारत में व्यापारिक शाखाएँ थीं?",
+      "is_impossible": false,
+      "gold_answers": [
+        "पुर्तगालियों"
+      ],
+      "predicted_text": "पुर्तगालियों [psg_168b33216432]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "572673f5708984140094c69e",
+      "question": "कौन सी गतिविधि स्थलाकृतिक ढाल को बनाए रखती है?",
+      "is_impossible": false,
+      "gold_answers": [
+        "के साथ-साथ निरंतर गति,"
+      ],
+      "predicted_text": "के साथ-साथ निरंतर गति, [psg_52c1c0a818dc]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a57cf7a770dc0001aeefda2",
+      "question": "भूकम्पविज्ञानी पृथ्वी की सतह का मानचित्र बनाने के लिए किसका उपयोग करते हैं?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5730b7ce069b5314008322c6",
+      "question": "अमेरिकी जनता ने फिलीपींस पर कब्जे की निंदा क्यों की?",
+      "is_impossible": false,
+      "gold_answers": [
+        "युद्ध छिड़ गया"
+      ],
+      "predicted_text": "युद्ध छिड़ गया [psg_80ed1c6f0a77]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5acff55577cf76001a68661e",
+      "question": "किसी देश के पास जितनी भूमि है, वह उसकी सबसे खराब स्थिति क्या है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5730bc308ab72b1400f9c73d",
+      "question": "जिसने उस समय ओटोमन साम्राज्य पर शासन किया जब वह अपने सबसे शक्तिशाली दौर में था।",
+      "is_impossible": false,
+      "gold_answers": [
+        "सुलेमान द"
+      ],
+      "predicted_text": "सुलेमान द [psg_a353f96a49bc]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a82432131013a001a33536d",
+      "question": "येल रोइंग क्रू की रैंकिंग क्या है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5a5915cd3e1742001a15cf78",
+      "question": "भूगर्भशास्त्री किस प्राचीन सम्पत्ति का अध्ययन करते हैं?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5730b4282461fd1900a9cfc8",
+      "question": "१९६० के दशक में रूस का नेता कौन था?",
+      "is_impossible": false,
+      "gold_answers": [
+        "निकिता ख्रुश्चेव"
+      ],
+      "predicted_text": "निकिता ख्रुश्चेव [psg_cd2af2ff0852]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "57263c78ec44d21400f3dc7b",
+      "question": "आर्पनेट और सीता कब चालू हुए?",
+      "is_impossible": false,
+      "gold_answers": [
+        "१९६९"
+      ],
+      "predicted_text": "१९६९ [psg_c4311b14f9c4]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a823a7731013a001a33530d",
+      "question": "एनसीएए डिविजन आई आइवी लीग प्रतियोगिता कितनी पुरानी है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "572657d9dd62a815002e8231",
+      "question": "अवसादी चट्टान को तीन प्रकार की चट्टानों में से किसमें बदला जा सकता है?",
+      "is_impossible": false,
+      "gold_answers": [
+        "चट्टान"
+      ],
+      "predicted_text": "चट्टान [psg_76f099a50509]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a55157f134fea001a0e18ec",
+      "question": "बीबीएन ने किसके लिए वित्तपोषण प्रदान किया?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5a605b5ee9e1cc001a33cd40",
+      "question": "डेविस ने अपने सिद्धांत, अवधारणा, विचार आदि को विकसित करने से पहले उन पर कभी शोध क्यों नहीं किया?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5a82237d31013a001a335244",
+      "question": "१८७५ में हार्वर्ड प्रायोजित रेगाटा में कितने लोग थे?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5a5645196349e2001acdccff",
+      "question": "पैकेट स्विचिंग का लक्ष्य क्या बनाना था?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5ad02ab477cf76001a686c6c",
+      "question": "टेरा नुलियस एक फ्रांसीसी अभिव्यक्ति है जिसका अंग्रेजी में क्या अर्थ है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "57308ddc396df919000961a5",
+      "question": "कौन सा कानून ब्रिटिश साम्राज्यवाद को उचित ठहराता है?",
+      "is_impossible": false,
+      "gold_answers": [
+        "टेरा नुलियस"
+      ],
+      "predicted_text": "टेरा नुलियस [psg_9ad49f60fcf0]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5726431aec44d21400f3dd17",
+      "question": "गेटवेज़ ने निजी कंपनियों को क्या करने की अनुमति दी",
+      "is_impossible": false,
+      "gold_answers": [
+        "निजी नेटवर्क को प्रायः गेटवे के माध्यम से सार्वजनिक नेटवर्क से जोड़ा जाता था, ताकि निजी नेटवर्क से बाहर स्थित स्थानों तक पहुंचा"
+      ],
+      "predicted_text": "निजी नेटवर्क को प्रायः गेटवे के माध्यम से सार्वजनिक नेटवर्क से जोड़ा जाता था, ताकि निजी नेटवर्क से बाहर स्थित स्थानों तक पहुंचा [psg_7f2bd16dfcd2]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5730a4d02461fd1900a9cf29",
+      "question": "फ्रांस ने अल्जीरिया पर कब नियंत्रण किया?",
+      "is_impossible": false,
+      "gold_answers": [
+        "१८३०"
+      ],
+      "predicted_text": "१८३० [psg_6faddf192433]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a551328134fea001a0e18d8",
+      "question": "विश्व की पहली वाणिज्यिक ऑनलाइन सेवा कौन सी थी?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5a5909b13e1742001a15cf4f",
+      "question": "ऊर्ध्वाधर दबाव के अंतर्गत चट्टान इकाइयों का क्या होता है?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "57263c78ec44d21400f3dc7d",
+      "question": "यूजरडाटाग्राम प्रोटोकॉल क्या गारंटी देता है?",
+      "is_impossible": false,
+      "gold_answers": [
+        "वर्चुअल कॉल प्रणाली में, नेटवर्क होस्ट तक डेटा की क्रमबद्ध डिलीवरी की गारंटी देता है।"
+      ],
+      "predicted_text": "वर्चुअल कॉल प्रणाली में, नेटवर्क होस्ट तक डेटा की क्रमबद्ध डिलीवरी की गारंटी देता है। [psg_c4311b14f9c4]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5a667f50846392001a1e1c6b",
+      "question": "बारान ने अपनी संदेश रूटिंग पद्धति को क्या नाम दिया?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    },
+    {
+      "query_id": "5727c0402ca10214002d9566",
+      "question": "सामान्य ज्ञान यथार्थवाद: अगासिज ने ज्ञान के अपने दोहरे दृष्टिकोण में किन स्कॉटिश दार्शनिकों को शामिल किया?",
+      "is_impossible": false,
+      "gold_answers": [
+        "थॉमस रीड और डगल्ड स्टीवर्ट"
+      ],
+      "predicted_text": "थॉमस रीड और डगल्ड स्टीवर्ट [psg_56e5ef8b0fb6]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5730ac782461fd1900a9cf74",
+      "question": "ओटो वॉन बिस्मार्क का जन्म कब हुआ था?",
+      "is_impossible": false,
+      "gold_answers": [
+        "१८६२"
+      ],
+      "predicted_text": "१८६२ [psg_268c888175c0]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "573062662461fd1900a9cdfa",
+      "question": "साम्राज्यवाद प्रायः किस तकनीक का उपयोग करके देशों को विभाजित करता है?",
+      "is_impossible": false,
+      "gold_answers": [
+        "\"अन्यीकरण\""
+      ],
+      "predicted_text": "\"अन्यीकरण\" [psg_a696aab853fd]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "57263677ec44d21400f3dc4c",
+      "question": "कौन सा डिलीवरी संदेश इस्तेमाल किया गया",
+      "is_impossible": false,
+      "gold_answers": [
+        "स्टोर और फॉरवर्ड स्विचिंग द्वारा"
+      ],
+      "predicted_text": "स्टोर और फॉरवर्ड स्विचिंग द्वारा [psg_21c1639cd3f1]",
+      "judge_verdict": "CORRECT_ANSWER",
+      "human_verdict": "CORRECT_ANSWER",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: answer span correctly present in prediction."
+    },
+    {
+      "query_id": "5ad035bd77cf76001a686e26",
+      "question": "जर्मनी का साम्राज्यवादी भविष्य कब तक रहेगा?",
+      "is_impossible": true,
+      "gold_answers": [],
+      "predicted_text": "दी गई जानकारी में इस प्रश्न का उत्तर उपलब्ध नहीं है।",
+      "judge_verdict": "CORRECT_ABSTENTION",
+      "human_verdict": "CORRECT_ABSTENTION",
+      "judge_is_correct": true,
+      "human_is_correct": true,
+      "agrees": true,
+      "auditor_notes": "Human verified: question is impossible and model properly refused."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "variant": "Full System S5",
+    "corpus": "Perturbed Dev",
+    "acc_ans": 0.84,
+    "acc_unans": 1.0,
+    "acc_overall": 0.92,
+    "acc_overall_ci95": "[87.33%, 96.00%]",
+    "false_refusal_rate": 0.09333333333333334,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.6776624242605824,
+    "citation_precision": 0.0
+  },
+  {
+    "variant": "w/o Query Agent",
+    "corpus": "Perturbed Dev",
+    "acc_ans": 0.84,
+    "acc_unans": 1.0,
+    "acc_overall": 0.92,
+    "acc_overall_ci95": "[87.33%, 96.00%]",
+    "false_refusal_rate": 0.16,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.6776624242605824,
+    "citation_precision": 0.0
+  },
+  {
+    "variant": "w/o Evidence Grader",
+    "corpus": "Perturbed Dev",
+    "acc_ans": 0.84,
+    "acc_unans": 1.0,
+    "acc_overall": 0.92,
+    "acc_overall_ci95": "[87.33%, 96.00%]",
+    "false_refusal_rate": 0.09333333333333334,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.6776624242605824,
+    "citation_precision": 0.0
+  },
+  {
+    "variant": "w/o Verifier",
+    "corpus": "Perturbed Dev",
+    "acc_ans": 0.84,
+    "acc_unans": 1.0,
+    "acc_overall": 0.92,
+    "acc_overall_ci95": "[87.33%, 96.00%]",
+    "false_refusal_rate": 0.09333333333333334,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.6776624242605824,
+    "citation_precision": 0.0
+  },
+  {
+    "variant": "w/o Arbiter Retry",
+    "corpus": "Perturbed Dev",
+    "acc_ans": 0.84,
+    "acc_unans": 1.0,
+    "acc_overall": 0.92,
+    "acc_overall_ci95": "[87.33%, 96.00%]",
+    "false_refusal_rate": 0.16,
+    "hallucination_rate": 0.0,
+    "token_f1": 0.6776624242605824,
+    "citation_precision": 0.0
+  }
+]
